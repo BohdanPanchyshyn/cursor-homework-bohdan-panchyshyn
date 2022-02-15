@@ -26,6 +26,7 @@ const discountSumm = (resultSumm - discount).toFixed(2);
 const netProfit = (resultSumm / 2);
 const netProfitResult = (netProfit - discount).toFixed(2);
 
+
 /*console.log('Максимальне число: ' + resultMax);
 console.log('Мінімальне число: ' + resultMin);
 console.log('Сума товарів: ' + resultSumm);
