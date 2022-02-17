@@ -15,11 +15,10 @@ if(evenNumbers == 1 ){
         sumEvenNumbers = sumEvenNumbers + startNumber;
                }
     }
-  console.log('Ваш результат: ' + sumEvenNumbers);
-
+  alert (`Ваш результат: ${sumEvenNumbers}`);
 }else{ 
   for(startNumber; startNumber<=finalNumber; startNumber++){
   sumAllNumbers = sumAllNumbers + startNumber;
      }
-  console.log('Ваш результат: ' + sumAllNumbers); 
+  alert (`Ваш результат: ${sumAllNumbers}`); 
 }
