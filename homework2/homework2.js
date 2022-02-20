@@ -1,10 +1,16 @@
 let sumAllNumbers = 0;
 let sumEvenNumbers = 0;
-let startNumber = prompt("Введіть число N від якого будемо складати: ");
-startNumber = Number(startNumber);
+let startNumber;
 
-let finalNumber = prompt("Введіть число M до якого будемо складати: ");
-finalNumber = Number(finalNumber);
+do{
+    startNumber = +prompt("Введіть число N від якого будемо складати: ");
+}while(isNaN(startNumber) || startNumber < 0);
+
+let finalNumber;
+
+do{
+    finalNumber = prompt("Введіть число M до якого будемо складати: ");
+}while(isNaN(finalNumber) || finalNumber < 0);
 
 let evenNumbers = confirm("Чи потрібно пропустити парні числа?");
 
