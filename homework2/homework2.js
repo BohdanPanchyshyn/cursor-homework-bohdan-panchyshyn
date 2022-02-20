@@ -14,7 +14,7 @@ do{
 
 let evenNumbers = confirm("Чи потрібно пропустити парні числа?");
 
-if(evenNumbers == 1 ){
+if(evenNumbers){
   
     for(startNumber; startNumber<=finalNumber; startNumber++){
       if(startNumber % 2){
