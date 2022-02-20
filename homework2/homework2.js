@@ -9,7 +9,7 @@ do{
 let finalNumber;
 
 do{
-    finalNumber = prompt("Введіть число M до якого будемо складати: ");
+    finalNumber = +prompt("Введіть число M до якого будемо складати: ");
 }while(isNaN(finalNumber) || finalNumber < 0);
 
 let evenNumbers = confirm("Чи потрібно пропустити парні числа?");
