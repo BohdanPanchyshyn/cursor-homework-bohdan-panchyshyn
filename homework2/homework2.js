@@ -13,16 +13,12 @@ do{
 }while(isNaN(finalNumber) || finalNumber <= 0 || finalNumber < startNumber);
 
 let evenNumbers = confirm("Чи потрібно пропустити парні числа?");
-  
-    for(startNumber; startNumber<=finalNumber; startNumber++){
 
-      if(!evenNumbers){
-
-        sumEvenNumbers = sumEvenNumbers + startNumber;
-
-      } else if(startNumber % 2){
-
-        sumEvenNumbers = sumEvenNumbers + startNumber;
-      }
+for(startNumber; startNumber<=finalNumber; startNumber++){
+  if(!evenNumbers){
+    sumEvenNumbers = sumEvenNumbers + startNumber;
+  } else if(startNumber % 2){
+      sumEvenNumbers = sumEvenNumbers + startNumber;
     }
-    alert (`Ваш результат: ${sumEvenNumbers}`);
+}
+alert (`Ваш результат: ${sumEvenNumbers}`);
