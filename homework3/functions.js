@@ -75,15 +75,10 @@ function isPalyndrom(word) {
 }
 function removeDuplicateCharacters(string) {
   const stringArray = string.toLowerCase().replaceAll(" ", "").split("");
-  // ловер кейс + забираєм пробіли і розбиваєм слово на масив
 
   const dublicatedLetter = stringArray.filter((el, idx, array) => array.indexOf(el) !== idx)
-  // фільтруємо масив і залишаємо тільки букви які повторюються
 
   const removeDublicatedLetters = stringArray.filter(el => !dublicatedLetter.includes(el)).join("");
-  // фільтруємо масив: el це кожна буква нашого масиву з усіма буквами
-  // ми дивимось чи ця буква є в масиві з дубльованими буквами і
-  // ми залишаємо тільки букви яких немає в масиві з дубльованими буквами 
 
   return removeDublicatedLetters
 }
