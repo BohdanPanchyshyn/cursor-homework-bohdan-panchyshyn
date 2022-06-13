@@ -4,15 +4,19 @@ function getMaxDigit(number) {
     return console.log("Incorect value!")
   } else {
     number = number.toString();
-    let arr = number.split([]);
+    let arr = number.split("");
     return Math.max(...arr);
   }
 }
 function powNumbers(numbers, pow) {
 
   let summ = numbers;
-  for (let i = 1; i < pow; i++) {
-    summ *= numbers;
+  if (pow !== 0) {
+    for (let i = 1; i < pow; i++) {
+      summ *= numbers;
+    }
+  } else {
+    summ = 0;
   }
   return summ;
 }
@@ -23,7 +27,7 @@ function nameFormatting(name) {
 }
 function resultTax(tax) {
 
-  impost = tax * (0.18 + 0.015);
+  const impost = tax * (0.18 + 0.015);
   tax = tax - impost;
   return tax;
 }
@@ -46,18 +50,18 @@ function countLetter(words, letter) {
 }
 function currencyConvert(amount) {
   if (!amount) return;
+  amount = amount.toLowerCase()
   const dolarRate = 29.52;
-  if (amount.toLowerCase().includes("uah")) {
-    return (amount.toLowerCase().split("uah")[0] / dolarRate).toFixed(2) + "$"
+  if (amount.includes("uah")) {
+    return (amount.split("uah")[0] / dolarRate).toFixed(2) + "$"
   } else if (amount.includes("$")) {
     return (amount.split("$")[0] * dolarRate).toFixed(2) + "UAH"
   } else return ("Incorrect value")
 }
-function getRandomPassword(passwordLength) {
-  let length = passwordLength ? passwordLength : 8;
+function getRandomPassword(passwordLength = 8) {
   let password = "";
-  for (let i = 0; i < length; i++) {
-    let a = Math.floor(Math.random() * length);
+  for (let i = 0; i < passwordLength; i++) {
+    let a = Math.floor(Math.random() * (10 - 1) + 1);
     password += a;
   }
   return password;
@@ -91,7 +95,7 @@ document.writeln(
    Функція №5: ${getRandomNumber(20, 30)} <br>
    Функція №6: ${countLetter('Банановий', 'а')} <br>
    Функція №7: ${currencyConvert('1000$')} <br>
-   Функція №8: ${getRandomPassword()} <br>
+   Функція №8: ${getRandomPassword(17)} <br>
    Функція №9: ${deleteLetters('b', "blablabla")} <br>
    Функція №10: ${isPalyndrom("Я несу гусеня")} <br>
    Функція №11: ${removeDuplicateCharacters("Бісквіт був дуже ніжним")} <br>

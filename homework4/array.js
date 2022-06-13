@@ -8,12 +8,12 @@ const girls = [];
 const boys = [];
 
 //Work 1
-function sortStudents() {
+function sortStudents() ({
    students.forEach(student => {
       student.slice(-1) === 'а' ? girls.push(student) : boys.push(student)
    })
-}
-sortStudents();
+})();
+
 
 const pairs = boys.map(function (student, indx) {
    return [`${boys[indx]} i ${girls[indx]}`];
