@@ -26,38 +26,32 @@ const students = [{
 
 //Work 1
 
-function getSubjects(...students) {
-   for (let i = 0; i < students.length; i++) {
-      let result = Object.keys(students[i].subjects);
-      let firstLetter = [];
-      for (let j = 0; j < result.length; j++) {
-         result[j] = result[j].replace("_", " ");
-         firstLetter[j] = result[j].replace(result[j], result[j].toUpperCase().substring(0, 1));
-         result[j] = firstLetter[j] + result[j].replace(result[j], result[j].toLowerCase().substring(1));
-      }
-      return result;
+function getSubjects(students) {
+   let result = Object.keys(students.subjects);
+   for (let j = 0; j < result.length; j++) {
+      result[j] = result[j].toUpperCase().substring(0, 1) + result[j].toLowerCase().substring(1).replace("_", " ");
    }
+   return result;
 }
 let resWork1 = getSubjects(students[0]);
 console.log("Cписок предметів: ", resWork1);
 
 //Work 2
 
-function getAverageMark(...students) {
-   let lengthArr = [];
-   for (let i = 0; i < students.length; i++) {
-      let a = Object.values(students[i].subjects);
-      for (let j = 0; j < a.length; j++) {
-         lengthArr = lengthArr.concat(a[j]);
-      }
+function getAverageMark(students) {
+   let allMarks = [];
+   let listSubjectsAndMarks = Object.values(students.subjects);
+   for (let j = 0; j < listSubjectsAndMarks.length; j++) {
+      allMarks = allMarks.concat(listSubjectsAndMarks[j]);
+
    }
-   return getAverage(lengthArr).toFixed(2);
+   return getAverage(allMarks).toFixed(2);
 }
 
 function getAverage(numbers) {
 
-   numbers.reduce((acc, el) => {
-      return newArray4 = (acc + el)
+   const newArray4 = numbers.reduce((acc, el) => {
+      return acc + el
    }, 0)
    return newArray4 / numbers.length;
 }
@@ -102,21 +96,20 @@ function getBestStudent(students) {
    let arrNew = [];
    let arrMark = [];
    let result = [];
-   for (let i = 0; i < students.length; i++) {
-      arrNew.push(getStudentInfo(students[i]));
-   }
 
-   arrNew.map((el, indx) => {
-      arrMark.push(parseFloat(arrNew[indx].averageMark));
+   students.map((el, i) => {
+      arrNew.push(getStudentInfo(students[i]));
+   })
+
+   arrNew.map((el) => {
+      arrMark.push(el.averageMark);
    })
 
    result = Math.max(...arrMark);
 
-   for (let i = 0; i < arrNew.length; i++) {
-      if (parseFloat(arrNew[i].averageMark) === result) {
-         result = arrNew[i].name;
-      }
-   }
+   arrNew.filter((el) => {
+      el.averageMark == result ? result = el.name : 0
+   })
 
    return result;
 }
