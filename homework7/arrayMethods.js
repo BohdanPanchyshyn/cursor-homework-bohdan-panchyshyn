@@ -35,11 +35,10 @@ console.log("Мода: ", getModa(2, 2, 8, 9, 4, 2));
 
 
 //Work 3
-let newArray4 = 0;
 function getAverage(...numbers) {
 
-   numbers.reduce((acc, el) => {
-      return newArray4 = (acc + el)
+   let newArray4 = numbers.reduce((acc, el) => {
+      return acc + el;
    }, 0)
    console.log("Cереднє арифметичне: ", newArray4 / numbers.length);
 }
@@ -75,8 +74,8 @@ console.log("Медіана: ", getMedian(1, 2, 3, 4, 5));
 let resultFilterNumbers = [];
 function filterEvenNumbers(...numbers) {
 
-   numbers.filter((el, indx) => {
-      numbers[indx] % 2 !== 0 ? resultFilterNumbers.push(el) : 0
+   numbers.filter((el) => {
+      el % 2 !== 0 ? resultFilterNumbers.push(el) : 0
    })
 }
 filterEvenNumbers(1, 2, 3, 4, 5, 6);
@@ -86,8 +85,8 @@ console.log("Фільтрація парних чисел: ", resultFilterNumber
 //Work 6
 let counterNumbers = 0;
 function countPositiveNumbers(...numbers) {
-   numbers.filter((el, indx) => {
-      numbers[indx] > 0 ? counterNumbers++ : 0
+   numbers.filter((el) => {
+      el > 0 ? counterNumbers++ : 0
    })
 }
 countPositiveNumbers(1, -2, 3, 4, -5, -6, 8, -9);
@@ -97,8 +96,8 @@ console.log("Кількість чисел більших 0: ", counterNumbers);
 let filterFive = [];
 function getDividedByFive(...numbers) {
 
-   numbers.filter((el, indx) => {
-      numbers[indx] % 5 !== 0 ? 0 : filterFive.push(el)
+   numbers.filter((el) => {
+      el % 5 !== 0 ? 0 : filterFive.push(el)
    })
 }
 getDividedByFive(6, 2, 55, 11, 78, 22, 55, 77, 57, 87, 23, 2, 56, 3, 45);
@@ -128,7 +127,7 @@ function divideByThree(word) {
    word2 = word2.toLowerCase().split("");
    let arrayWords = [];
    for (let i = 1; i <= word2.length;) {
-      word2.length !== "" ? arrayWords.push(word2.splice(0, 3).join("")) : 0;
+      arrayWords.push(word2.splice(0, 3).join(""));
    }
    return arrayWords;
 
