@@ -25,7 +25,7 @@ function generateBlocks() {
 }
 
 function generateBlocksInterval() {
-   clearContainer()
+   clearContainer();
    generateBlocks();
    let oldBlocks = document.getElementsByClassName("article");
    setInterval(() => {
