@@ -1,3 +1,5 @@
+alert("Щоб квадрати з'явились на сторінці, необхідно викликати функцію generateBlocks(); або generateBlocksInterval();")
+
 const element = document.getElementById("container");
 
 function color() {
