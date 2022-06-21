@@ -1,12 +1,6 @@
 html {
    font-size: 10px;
-   background: url(../media/background.jpg);
-   background-position-x: center;
-   background-position-y: bottom;
-   background-attachment: scroll;
-   background-repeat: repeat;
-   background-origin: padding-box;
-   background-clip: border-box;
+   background: url(../media/background.jpg) bottom center;
    background-size: cover;
 }
 
@@ -26,7 +20,6 @@ body {
 
 .button {
    background-color: rgba(0, 0, 0, 0.3);
-   padding: 1rem .5rem;
    width: 10rem;
    border-radius: .5rem;
    border: .5rem solid black;
@@ -37,7 +30,7 @@ body {
 }
 
 kbd {
-   color: black;
+   color: rgb(255, 255, 255);
    font-size: 5rem;
    display: block;
 }
@@ -45,7 +38,7 @@ kbd {
 .nameMusic {
    font-weight: bolder;
    color: #ffc600;
-   letter-spacing: .1rem;
+   font-size: 1.5rem;
 }
 
 .playKey {
