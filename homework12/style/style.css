@@ -1,11 +1,12 @@
-body {
+html {
    background-color: gray;
-   background-image: url(../media/background.jpg);
+   background-image: url(../media/background.jpg) ;
    background-size: cover;
 }
 
 .boxButton {
    display: flex;
+   flex: 1;
    min-height: 100vh;
    align-items: center;
    justify-content: center;
