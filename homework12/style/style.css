@@ -1,11 +1,24 @@
-body {
-   background-color: gray;
-   background-image: url(../media/background.jpg);
+html {
+   font-size: 10px;
+   background: url(../media/background.jpg);
+   background-position-x: center;
+   background-position-y: bottom;
+   background-attachment: scroll;
+   background-repeat: repeat;
+   background-origin: padding-box;
+   background-clip: border-box;
    background-size: cover;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
 }
 
 .boxButton {
    display: flex;
+   flex: 1;
    min-height: 100vh;
    align-items: center;
    justify-content: center;
@@ -13,18 +26,19 @@ body {
 
 .button {
    background-color: rgba(0, 0, 0, 0.3);
-   width: 120px;
-   height: 100px;
-   border-radius: 8px;
-   border: .3rem solid black;
-   margin: 10px;
+   padding: 1rem .5rem;
+   width: 10rem;
+   border-radius: .5rem;
+   border: .5rem solid black;
+   margin: 1rem;
+   font-size: 1.5rem;
    text-align: center;
    text-shadow: 0 0 .5rem black;
 }
 
 kbd {
    color: black;
-   font-size: 4rem;
+   font-size: 5rem;
    display: block;
 }
 
