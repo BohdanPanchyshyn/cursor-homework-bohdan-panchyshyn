@@ -2,6 +2,7 @@ html {
    background-color: gray;
    background-image: url(../media/background.jpg) ;
    background-size: cover;
+   background-repeat: no-repeat;
 }
 
 .boxButton {
