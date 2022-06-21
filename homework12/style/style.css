@@ -1,6 +1,8 @@
 html {
    font-size: 10px;
-   background: url(../media/background.jpg) bottom center ;
+   background: url(../media/background.jpg);
+   background-position-x: center;
+   background-position-y: bottom;
    background-attachment: scroll;
    background-repeat: repeat;
    background-origin: padding-box;
@@ -9,7 +11,9 @@ html {
 }
 
 body {
-font-family: sans-serif;
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
 }
 
 .boxButton {
