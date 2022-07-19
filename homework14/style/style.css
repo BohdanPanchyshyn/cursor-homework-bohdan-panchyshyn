@@ -96,7 +96,7 @@ body {
    font-size: 12px;
    color: #e1cf6e;
    text-align: right;
-   line-height: 3rem;
+   line-height: 2.8rem;
 }
 
 .styleImageGender {
@@ -123,7 +123,7 @@ body {
 .buttonStyle {
    font-family: marquee;
    margin: 15px;
-   width: 135px;
+   width: 140px;
    height: 35px;
    border-radius: 10px;
    box-shadow: 2px 3px 15px rgb(4, 7, 192);
