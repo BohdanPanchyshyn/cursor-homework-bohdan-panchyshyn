@@ -1,0 +1,172 @@
+html {
+   font-size: 10px;
+   background: url(../media/back_two.jpg) bottom center;
+   background-size: cover;
+}
+
+body {
+   font-family: sans-serif;
+   height: 100vh;
+}
+
+.boxLoader {
+   display: flex;
+   height: 100vh;
+   align-items: center;
+   align-content: center;
+   justify-content: center;
+}
+
+.loader {
+   width: 175px;
+   height: 175px;
+   border: 10px solid #fff;
+   border-radius: 50%;
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   align-content: center;
+   justify-content: center;
+}
+
+.loader::before {
+   content: "";
+   position: absolute;
+   display: block;
+   bottom: 50%;
+   width: 15px;
+   height: 45%;
+   border-radius: 50px;
+   transform-origin: bottom center;
+   background-color: #fff;
+   animation: rotate 2s linear infinite;
+}
+
+.container {
+   display: block;
+   height: 100vh;
+}
+
+.stylePlanet {
+   margin: 35px;
+   float: left;
+   width: 150px;
+   height: 150px;
+   background-image: url("../media/blackmap.jpg");
+   background-size: cover;
+   border-radius: 50%;
+   box-shadow: 1px 5px 15px rgb(238, 51, 8);
+   animation: animationPlanet 19s linear alternate infinite;
+   margin-right: auto;
+}
+
+.stylePlanetText {
+   font-family: seasrn;
+   font-weight: bolder;
+   font-size: 13px;
+   color: #e1cf6e;
+   text-align: center;
+   line-height: 33rem;
+   letter-spacing: 0.1em;
+}
+
+.styleCard {
+   margin: 35px;
+   float: left;
+   width: 250px;
+   height: 150px;
+   border-radius: 18px;
+   border: solid 3px #e1cf6e;
+   box-shadow: 2px 3px 15px rgb(238, 51, 8);
+   background-color: rgb(43, 41, 41);
+   margin-right: 20px;
+}
+
+.styleCard:hover {
+   transform: scale(1.1);
+   cursor: pointer;
+}
+
+.styleTextCard {
+   padding-right: 5px;
+   font-weight: bolder;
+   font-size: 12px;
+   color: #e1cf6e;
+   text-align: right;
+   line-height: 3rem;
+}
+
+.styleImageGender {
+   width: 50px;
+   height: 50px;
+   float: right;
+   padding-right: 7px;
+}
+
+.styleImageCard {
+   width: 125px;
+   height: 150px;
+   position: absolute;
+   border-radius: 15px;
+}
+
+.groupButton {
+   display: flex;
+   justify-content: center;
+   width: 99vw;
+   align-items: center;
+}
+
+.buttonStyle {
+   font-family: marquee;
+   margin: 15px;
+   width: 135px;
+   height: 35px;
+   border-radius: 10px;
+   box-shadow: 2px 3px 15px rgb(4, 7, 192);
+   border: solid 3px #1824cf;
+   background-color: rgb(43, 41, 41);
+   color: #e1cf6e;
+}
+
+.buttonStyle:hover {
+   background: #1824cf;
+   box-shadow: 0 0 5px #1824cf, 0 0 25px #1824cf, 0 0 50px #1824cf, 0 0 200px #1824cf;
+   transform: scale(1.1);
+   cursor: pointer;
+}
+
+.inputNumberFilms {
+   background-color: rgb(43, 41, 41);
+   border-radius: 8px;
+   width: 170px;
+   height: 25px;
+   color: #e1cf6e;
+}
+
+@font-face {
+   font-family: seasrn;
+   src: url("../style/font/SEASRN.ttf");
+}
+
+@font-face {
+   font-family: marquee;
+   src: url("../style/font/Marquee.otf");
+}
+
+@keyframes rotate {
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+@keyframes animationPlanet {
+   0% {
+      background-position: 0 0;
+   }
+
+   100% {
+      background-position: -1500px 0;
+   }
+}
