@@ -145,6 +145,7 @@ body {
    width: 170px;
    height: 25px;
    color: #e1cf6e;
+   padding-left: 25px;
 }
 
 @font-face {
@@ -178,4 +179,16 @@ body {
       flex-direction: column;
       align-items: center;
    }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+   appearance: none;
+   -moz-appearance: textfield;
 }
