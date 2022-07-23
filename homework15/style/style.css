@@ -1,0 +1,25 @@
+body {
+   background-color: rgb(1, 19, 34);
+}
+
+.boxContent {
+   float: inline-start
+}
+
+#text {
+   color: wheat;
+   font-size: 14px;
+}
+
+.button {
+   color: wheat;
+   background-color: rgb(88, 70, 36);
+   width: 82px;
+   height: 30px;
+   border-radius: 5px;
+   border: 2px solid lightsalmon;
+}
+
+.button:hover {
+   border: 2px solid black;
+}
